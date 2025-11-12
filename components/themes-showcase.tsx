@@ -163,32 +163,6 @@ export function ThemesShowcase() {
   const featuredThemes = displayThemes.slice(0, 4)
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      {featuredThemes.map((theme) => {
-        const IconComponent = themeIcons[theme.slug]
-        return (
-          <Link
-            href={`/themes/${theme.slug}`}
-            key={theme.id}
-            className={`flex flex-col items-center justify-center p-6 rounded-lg border ${themeColors[theme.slug]}`}
-          >
-            <div className="w-16 h-16 mb-4">
-              {IconComponent ? (
-                <IconComponent className="w-full h-full" />
-              ) : (
-                <Image
-                  src={themeImages[theme.slug] || "/default-theme-image.jpg"}
-                  alt={theme.name}
-                  width={64}
-                  height={64}
-                />
-              )}
-            </div>
-            <h3 className="text-xl font-semibold mb-2">{theme.name}</h3>
-            <p className="text-gray-600 text-center">{theme.description}</p>
-          </Link>
-        )
-      })}
-    </div>
+    null
   )
 }
